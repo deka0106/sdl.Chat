@@ -52,6 +52,8 @@ public class ChatMessageWriter implements Closeable {
         } else {
             writer.value(message.sender);
         }
+        writer.name(ChatMessage.FIELD_SOUND);
+        writer.value(message.sound);
         writer.endObject();
     }
 }
