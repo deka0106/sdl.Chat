@@ -92,6 +92,7 @@ class ClientAgent extends Agent {
         if (socket == null) {
             Toast.makeText(activity, R.string.toast_connection_failed, Toast.LENGTH_SHORT).show();
             activity.setState(State.Disconnected);
+            return;
         }
         runCommThread(socket);
     }
